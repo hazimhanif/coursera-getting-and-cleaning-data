@@ -86,5 +86,5 @@ names(final_dataset) <- make.names(names(final_dataset))
 tidy <- aggregate(final_dataset, by=list(activity = final_dataset$activity, subject=final_dataset$subject), mean)
 tidy[,90] = NULL
 tidy[,89] = NULL
-write.table(tidy, "tidy.txt", sep="\t")
+write.table(tidy, "tidy.txt", sep="\t", row.name=FALSE)
 #end (5th Requirement)
